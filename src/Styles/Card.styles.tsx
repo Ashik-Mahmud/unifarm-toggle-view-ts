@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardStyle = styled.div`
   position: relative;
-
+  margin-bottom: 2rem;
   /* for list view  */
   .list {
     position: relative;
@@ -23,10 +23,12 @@ export const CardStyle = styled.div`
         display: flex;
         align-items: center;
         gap: 2rem;
+        flex: 2;
       }
       .info {
         display: flex;
         flex-direction: column;
+        flex: 1;
         .sub-title {
           display: flex;
           align-items: center;
@@ -118,7 +120,8 @@ export const CardStyle = styled.div`
         display: flex;
         align-items: center;
         gap: 1rem;
-
+        justify-content: flex-start;
+        flex-wrap: wrap;
         button {
           position: relative;
           display: flex;
@@ -135,6 +138,16 @@ export const CardStyle = styled.div`
           transition: all 0.5s ease;
           &:hover {
             background-color: #03a8f416;
+          }
+        }
+        .btn-stack {
+          background-color: transparent;
+          color: #673ab7;
+          border: 1px solid #673ab7;
+          padding: 0.5rem 1rem;
+          &:hover {
+            background-color: #673ab7;
+            color: #fff;
           }
         }
       }

@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "FTX",
+    "image": "https://i.ibb.co/mbq3RLS/Frame-8970.png",
+    "rewards": "https://i.ibb.co/bFDpy6g/Group-9227.png",
+    "buttonName": "Get Upto 200%",
+    "fire": true
+  },
+  {
+    "id": 2,
+    "name": "LINK",
+    "image": "https://i.ibb.co/9TFK3RL/link.png",
+    "rewards": "https://i.ibb.co/Px91CgR/link-rewards.png",
+    "buttonName": "Boosted"
+  },
+  {
+    "id": 3,
+    "name": "DAI",
+    "image": "https://i.ibb.co/1bFbKnj/dai.png",
+    "rewards": "https://i.ibb.co/NY0z7Rt/dai-rewards.png",
+    "buttonName": "Calculate APY"
+  },
+  {
+    "id": 4,
+    "name": "UNI",
+    "image": "https://i.ibb.co/nmncH3n/Uni.png",
+    "rewards": "https://i.ibb.co/7NTtw4M/uni-dot-rewards.png",
+    "buttonName": "Boosted",
+    "fire": true
+  },
+  {
+    "id": 5,
+    "name": "DOT",
+    "image": "https://i.ibb.co/42xjPPL/dot.png",
+    "rewards": "https://i.ibb.co/7NTtw4M/uni-dot-rewards.png",
+    "buttonName": "Calculate APY"
+  }
+]

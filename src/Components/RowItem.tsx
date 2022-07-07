@@ -1,26 +1,38 @@
-import React from "react";
+type Props = {
+  id: number;
+  name: string;
+  image: string;
+  rewards: string;
+  buttonName: string;
+  fire?: boolean;
+  view: Boolean;
+};
 
-type Props = {};
-
-const RowItem: React.FC = (props: Props) => {
+const RowItem = ({
+  id,
+  name,
+  image,
+  rewards,
+  fire,
+  buttonName,
+  view,
+}: Props) => {
   return (
     <li>
       {/* info1 */}
       <div className="info-image ">
-        <img
-          src="https://i.ibb.co/mbq3RLS/Frame-8970.png"
-          alt="cryptoImage"
-          width={80}
-        />
+        <img src={image} alt={name} width={80} />
         <div>
           <span className="sub-title">
             Cohort 29{" "}
-            <img
-              src="https://i.ibb.co/DCZL96w/Local-Fire-Department-Outlined.png"
-              alt="fire"
-            />
+            {fire && (
+              <img
+                src="https://i.ibb.co/DCZL96w/Local-Fire-Department-Outlined.png"
+                alt="fire"
+              />
+            )}
           </span>
-          <h3>FTX</h3>
+          <h3>{name}</h3>
         </div>
       </div>
 
@@ -41,7 +53,7 @@ const RowItem: React.FC = (props: Props) => {
       <div className="info">
         <span className="sub-title">Rewards</span>
         <h3>
-          <img src="https://i.ibb.co/bFDpy6g/Group-9227.png" alt="rewards" />{" "}
+          <img src={rewards} alt={name + id} />{" "}
         </h3>
       </div>
       {/* info4 */}
@@ -52,9 +64,10 @@ const RowItem: React.FC = (props: Props) => {
       {/* info5 */}
       <div className="info btn-group">
         <button>
-          <img src="https://i.ibb.co/hCs8BZB/Group.png" alt="plane" /> Get Upto
-          200%
+          <img src="https://i.ibb.co/hCs8BZB/Group.png" alt="plane" />{" "}
+          {buttonName}
         </button>
+        {view && <button className="btn-stack">Stack</button>}
       </div>
     </li>
   );
