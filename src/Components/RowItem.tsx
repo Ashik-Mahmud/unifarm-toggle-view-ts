@@ -12,7 +12,7 @@ const RowItem: React.FC = (props: Props) => {
           alt="cryptoImage"
           width={80}
         />
-        <div className="info">
+        <div>
           <span className="sub-title">
             Cohort 29{" "}
             <img
@@ -28,7 +28,11 @@ const RowItem: React.FC = (props: Props) => {
       <div className="info">
         <span className="sub-title">Pool Filled</span>
         <h3>
-          <img src="https://i.ibb.co/mFTrJx5/Group-9175.png" alt="pool" />{" "}
+          <img
+            src="https://i.ibb.co/mFTrJx5/Group-9175.png"
+            width={30}
+            alt="pool"
+          />{" "}
           78.88%
         </h3>
       </div>
@@ -46,7 +50,7 @@ const RowItem: React.FC = (props: Props) => {
         <h3>93.86%</h3>
       </div>
       {/* info5 */}
-      <div className="info">
+      <div className="info btn-group">
         <button>
           <img src="https://i.ibb.co/hCs8BZB/Group.png" alt="plane" /> Get Upto
           200%

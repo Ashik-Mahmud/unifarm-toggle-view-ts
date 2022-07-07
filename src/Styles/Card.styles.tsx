@@ -61,18 +61,73 @@ export const CardStyle = styled.div`
   .card {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     list-style: none;
     margin: 0px;
     padding: 0px;
+    h3 {
+      margin: 0.2rem 0rem;
+      font-size: 16px;
+    }
+    .sub-title {
+      color: #616161;
+      font-size: 14px;
+    }
     li {
       position: relative;
       border: 1px solid #e0e0e0;
       border-radius: 13px;
       padding: 30px 23px;
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      padding-right: 6rem;
+
       .info-image {
         display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+
+        > img {
+          width: 60px;
+        }
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+          display: flex;
+          align-items: center;
+          gap: 0.1rem;
+        }
+      }
+      .btn-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          background-color: transparent;
+          border: 1px solid #03a9f4;
+          font-family: "Poppins", sans-serif;
+          color: #03a9f4;
+          font-size: 0.9rem;
+          padding: 0.5rem 0.6rem;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: #03a8f416;
+          }
+        }
       }
     }
   }
