@@ -1,10 +1,12 @@
-import React from "react";
 import { BsGrid, BsListUl } from "react-icons/bs";
 import styled from "styled-components";
 
-type Props = {};
+type Props = {
+  view: Boolean;
+  setView: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-const ViewHeader: React.FC = (props: Props) => {
+const ViewHeader = ({ view, setView }: Props) => {
   return (
     <ViewHeaderStyle>
       <div className="search-options">
@@ -20,10 +22,16 @@ const ViewHeader: React.FC = (props: Props) => {
         </div>
       </div>
       <div className="view-options">
-        <div className="view-options-item active">
+        <div
+          onClick={() => setView(false)}
+          className={`view-options-item ${!view && "active"}`}
+        >
           <BsListUl />
         </div>
-        <div className="view-options-item ">
+        <div
+          onClick={() => setView(true)}
+          className={`view-options-item ${view && "active"}`}
+        >
           <BsGrid />
         </div>
       </div>

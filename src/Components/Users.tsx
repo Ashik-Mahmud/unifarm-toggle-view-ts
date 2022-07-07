@@ -1,6 +1,5 @@
 type Props = {
   name: string;
-  number?: number;
 };
 
 const Users = (props: Props) => {

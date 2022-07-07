@@ -1,12 +1,14 @@
 import { CardStyle } from "../Styles/Card.styles";
 import RowItem from "./RowItem";
 
-type Props = {};
+type Props = {
+  view: Boolean;
+};
 
-const View: React.FC = (props: Props) => {
+const View = ({ view }: Props) => {
   return (
     <CardStyle>
-      <ul className="card">
+      <ul className={view ? "card" : "list"}>
         <RowItem />
         <RowItem />
         <RowItem />
