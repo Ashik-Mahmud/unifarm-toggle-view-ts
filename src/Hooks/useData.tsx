@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 
-type Props = {};
-
-const useData = (props: Props) => {
-  const [data, setData] = useState([]);
+const useData = <T,>(url: string, initialState: T): [T, boolean] => {
+  const [data, setData] = useState<T>(initialState);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`data.json`)
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
-  return [data, setData];
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      });
+  }, [url]);
+  return [data, loading];
 };
 
 export default useData;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import useData from "../Hooks/useData";
 import { CardStyle } from "../Styles/Card.styles";
 import RowItem from "./RowItem";
 
@@ -15,15 +15,18 @@ type dataProps = {
   fire?: boolean;
 };
 
+interface InfoProps {
+  id: number;
+  name: string;
+  image: string;
+  rewards: string;
+  buttonName: string;
+  fire?: boolean;
+}
+
 const View = ({ view }: Props) => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(`data.json`)
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
-
+  const [data, loading] = useData<InfoProps[]>(`data.json`, []);
+  if (loading) return <div>Loading...</div>;
   return (
     <CardStyle>
       <ul className={view ? "card" : "list"}>
