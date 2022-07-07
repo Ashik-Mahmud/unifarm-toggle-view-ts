@@ -3,7 +3,7 @@ import RowItem from "./RowItem";
 
 type Props = {};
 
-const Card: React.FC = (props: Props) => {
+const View: React.FC = (props: Props) => {
   return (
     <CardStyle>
       <ul className="card">
@@ -16,4 +16,4 @@ const Card: React.FC = (props: Props) => {
   );
 };
 
-export default Card;
+export default View;
