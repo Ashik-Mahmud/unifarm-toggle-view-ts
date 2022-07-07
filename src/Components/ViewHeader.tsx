@@ -40,11 +40,15 @@ const ViewHeaderStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
   .search-options {
     display: flex;
     position: relative;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
+
     input,
     select {
       border: none;

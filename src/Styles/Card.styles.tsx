@@ -15,6 +15,7 @@ export const CardStyle = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       padding: 20px;
       box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.15);
       .info-image {
@@ -66,6 +67,12 @@ export const CardStyle = styled.div`
     list-style: none;
     margin: 0px;
     padding: 0px;
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     h3 {
       margin: 0.2rem 0rem;
       font-size: 16px;
@@ -83,7 +90,9 @@ export const CardStyle = styled.div`
       flex-direction: column;
       gap: 21px;
       padding-right: 6rem;
-
+      @media (max-width: 1000px) {
+        padding-right: 23px;
+      }
       .info-image {
         display: flex;
         align-items: center;

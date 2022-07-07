@@ -6,7 +6,6 @@ function App() {
     <div className="App ">
       <div className="container">
         <h1 className="text-center">UniFarm Toggle View With TypeScript.</h1>
-
         <ViewContainer />
       </div>
     </div>
