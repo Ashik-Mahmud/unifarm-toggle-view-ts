@@ -7,3 +7,16 @@ This is uniFarm Toggle View Application for TypeScript React Where you can toggl
 - ReactJS
 - TypeScript
 - Styled Components
+- React Icons
+
+## Features
+
+- You can toggle View List Into Card
+
+## Demo Link [Click Here]()
+
+## Preview Screenshot
+
+![imageScreenshot](./preview.png)
+
+> Thanks for reach out me on Github.

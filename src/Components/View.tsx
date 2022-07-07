@@ -6,7 +6,7 @@ type Props = {};
 const View: React.FC = (props: Props) => {
   return (
     <CardStyle>
-      <ul className="card">
+      <ul className="list">
         <RowItem />
         <RowItem />
         <RowItem />

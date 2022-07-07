@@ -20,10 +20,10 @@ const ViewHeader: React.FC = (props: Props) => {
         </div>
       </div>
       <div className="view-options">
-        <div className="view-options-item">
+        <div className="view-options-item active">
           <BsListUl />
         </div>
-        <div className="view-options-item active">
+        <div className="view-options-item ">
           <BsGrid />
         </div>
       </div>
